@@ -1,0 +1,24 @@
+name: LinkedIn post automation
+
+on:
+  schedule:
+    - cron: "*/2 * * * *"
+      
+jobs:
+  logLatestRelease:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout repo
+       uses: actions/checkout@v2
+       
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+          python-version: 3.8
+    
+     - name: Get result
+       run: echo "${{steps.set-result.outputs.result}}"
+       
+     - run: |
+          output=$(python t1.py)
+          echo ${output}
