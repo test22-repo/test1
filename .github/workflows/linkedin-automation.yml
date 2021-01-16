@@ -18,6 +18,6 @@ jobs:
        run: echo "${{steps.set-result.outputs.result}}"
        
      - name: Execute script  
-     - run: |
+       run: |
           python t1.py a b c
           
