@@ -14,7 +14,11 @@ jobs:
        with:
           python-version: 3.8
        
-     - name: Execute script  
+     - name: Execute script 
+       env: 
+             v1: a
+             v2: b
+             v3: c 
        run: |
-          python t1.py a b c
+          python t1.py $v1 $v2 $v3
           
