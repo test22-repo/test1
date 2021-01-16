@@ -20,5 +20,5 @@ jobs:
        run: echo "${{steps.set-result.outputs.result}}"
        
      - run: |
-          output=$(python t1.py)
+          output=$(python t1.py a b c)
           echo ${output}
