@@ -3,7 +3,7 @@ name: LinkedIn post automation
 on: [push]
       
 jobs:
-  logLatestRelease:
+  Testing script:
     runs-on: ubuntu-latest
     steps:
      - name: Checkout repo
