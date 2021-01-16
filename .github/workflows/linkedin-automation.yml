@@ -13,9 +13,6 @@ jobs:
        uses: actions/setup-python@v2
        with:
           python-version: 3.8
-    
-     - name: Get result
-       run: echo "${{steps.set-result.outputs.result}}"
        
      - name: Execute script  
        run: |
