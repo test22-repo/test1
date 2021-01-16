@@ -1,6 +1,8 @@
 name: LinkedIn post automation
 
-on: [push]
+on: 
+   schedule:
+         - cron: '0 */2 * * *'
       
 jobs:
   Testing_script:
